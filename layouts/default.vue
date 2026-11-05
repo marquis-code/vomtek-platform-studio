@@ -5,13 +5,18 @@ const nav = [
   { label: 'Overview', to: '/', icon: LayoutDashboard },
   { label: 'Customers', to: '/customers', icon: Building2 },
   { label: 'Orders', to: '/orders', icon: Package },
+  { label: 'Invoices', to: '/invoices', icon: CreditCard },
   { label: 'Rentals', to: '/rentals', icon: Truck },
   { label: 'Reports', to: '/reports', icon: Radar },
+  { label: 'Work orders', to: '/work-orders', icon: ClipboardList },
   { label: 'Home jobs', to: '/jobs', icon: Home },
   { label: 'Catalog', to: '/catalog', icon: Boxes },
   { label: 'Subscriptions', to: '/subscriptions', icon: CreditCard },
   { label: 'Partners', to: '/partners', icon: Handshake },
   { label: 'Leads', to: '/leads', icon: Users },
+  { label: 'Contractors', to: '/contractors', icon: Users },
+  { label: 'Users', to: '/users', icon: Users },
+  { label: 'Audit', to: '/audit', icon: Activity },
   { label: 'Settings', to: '/settings', icon: Settings },
 ]
 const title = computed(() => nav.find(n => n.to === route.path)?.label || 'Studio')

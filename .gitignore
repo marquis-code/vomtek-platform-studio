@@ -11,3 +11,4 @@ dist
 coverage
 services/engine/.venv
 services/engine/__pycache__
+uploads
