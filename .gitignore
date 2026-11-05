@@ -1,0 +1,13 @@
+node_modules
+.pnpm-store
+.nuxt
+.output
+dist
+.env
+.env.*
+!.env.example
+.DS_Store
+*.log
+coverage
+services/engine/.venv
+services/engine/__pycache__

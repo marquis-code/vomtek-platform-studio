@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@font-face{font-family:"Clash Display";src:url("/fonts/clash-display-500.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Clash Display";src:url("/fonts/clash-display-600.woff2") format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"Satoshi";src:url("/fonts/satoshi-400.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Satoshi";src:url("/fonts/satoshi-500.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Satoshi";src:url("/fonts/satoshi-700.woff2") format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"IBM Plex Mono";src:url("/fonts/ibm-plex-mono-400.woff2") format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"IBM Plex Mono";src:url("/fonts/ibm-plex-mono-500.woff2") format("woff2");font-weight:500;font-display:swap}
+@theme {
+  --color-ink:#07100e; --color-ink-2:#0b1713; --color-paper:#f1ede2; --color-bone:#f8f5ec; --color-signal:#ff5a1f; --color-mint:#5be3b3; --color-mint-deep:#0b6b4e; --color-signal-deep:#c83b09;
+  --font-sans:"Satoshi",ui-sans-serif,sans-serif; --font-display:"Clash Display","Satoshi",sans-serif; --font-mono:"IBM Plex Mono",monospace;
+}
+@layer base { body{background:var(--color-paper);color:var(--color-ink);font-family:var(--font-sans);font-size:14px;-webkit-font-smoothing:antialiased} h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-.03em;font-weight:500} input,select,textarea{font:inherit} ::selection{background:var(--color-signal);color:var(--color-ink)} }
+@utility label-mono{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase}
+@layer components {
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;min-height:2.2rem;padding:0 .8rem;border-radius:9999px;font-size:.7rem;font-weight:700;letter-spacing:.02em;transition:background .2s,color .2s,border-color .2s}
+  .btn-dark{background:var(--color-ink);color:var(--color-bone)} .btn-dark:hover{background:var(--color-signal);color:var(--color-ink)}
+  .btn-primary{background:var(--color-signal);color:var(--color-ink)} .btn-primary:hover{background:var(--color-ink);color:var(--color-bone)}
+  .btn-outline{border:1px solid rgba(7,16,14,.2);color:var(--color-ink)} .btn-outline:hover{border-color:var(--color-ink);background:var(--color-ink);color:var(--color-bone)}
+  .btn-mint{background:var(--color-mint);color:var(--color-ink)}
+  .a-input{width:100%;border:1px solid rgba(7,16,14,.15);border-radius:8px;background:var(--color-bone);padding:.55rem .7rem;font-size:.78rem;outline:none;transition:border-color .2s} .a-input:focus{border-color:var(--color-signal)}
+  .a-label{display:block;margin-bottom:.3rem;font-family:var(--font-mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(7,16,14,.45)}
+  .a-card{background:var(--color-bone);border:1px solid rgba(7,16,14,.12);border-radius:12px}
+}
