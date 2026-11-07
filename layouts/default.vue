@@ -34,7 +34,7 @@ function logout(){api.clear();router.push('/login')}
   <div class="min-h-screen bg-paper lg:grid lg:grid-cols-[236px_1fr]">
     <aside class="fixed inset-y-0 left-0 z-50 flex w-[236px] -translate-x-full flex-col border-r border-bone/10 bg-ink text-bone transition-transform lg:static lg:translate-x-0" :class="open ? 'translate-x-0' : ''">
       <div class="flex h-[64px] items-center justify-between border-b border-bone/10 px-5"><BrandMark tone="light" /><button class="lg:hidden" @click="open=false"><X :size="17"/></button></div>
-      <div class="mx-3 mt-4 rounded-lg border border-bone/10 bg-bone/5 p-3"><p class="font-mono text-[7.5px] uppercase tracking-[.1em] text-bone/35">Operations console</p><p class="mt-1 text-[11.5px] font-medium">LineSight Studio</p><span class="mt-2 flex items-center gap-1.5 font-mono text-[7.5px] uppercase tracking-[.08em] text-mint"><span class="size-1.5 rounded-full bg-mint" /> All systems live</span></div>
+      <div class="mx-3 mt-4 rounded-lg border border-bone/10 bg-bone/5 p-3"><p class="font-mono text-[7.5px] uppercase tracking-[.1em] text-bone/35">Operations console</p><p class="mt-1 text-[11.5px] font-medium">Vomtek Studio</p><span class="mt-2 flex items-center gap-1.5 font-mono text-[7.5px] uppercase tracking-[.08em] text-mint"><span class="size-1.5 rounded-full bg-mint" /> All systems live</span></div>
       <nav class="mt-4 flex-1 space-y-0.5 overflow-y-auto px-2.5 pb-4">
         <NuxtLink v-for="n in nav" :key="n.to" :to="n.to" class="flex items-center gap-3 rounded-lg px-3 py-2 text-[11.5px] text-bone/50 transition-colors hover:bg-bone/5 hover:text-bone" active-class="!bg-bone/10 !text-bone"><component :is="n.icon" :size="14" :stroke-width="1.7"/>{{ n.label }}</NuxtLink>
       </nav>

@@ -2,7 +2,7 @@
 import { Activity, Database, Globe2, KeyRound, ShieldCheck } from 'lucide-vue-next'
 const api=useApi(); const runtime=useRuntimeConfig()
 const { data: settings, refresh }=await useAsyncData('admin-settings',()=>api.request<any[]>('/admin/settings').catch(()=>[]))
-const config=reactive({ taxRate: 0.0825, supportEmail: 'support@linesight.io' })
+const config=reactive({ taxRate: 0.0825, supportEmail: 'support@vomtek.com' })
 watch(settings,(v)=>{ if(v){ const tax=v.find((x:any)=>x.key==='taxRate'); const mail=v.find((x:any)=>x.key==='supportEmail'); if(tax?.value?.rate!=null) config.taxRate=tax.value.rate; if(mail?.value?.email) config.supportEmail=mail.value.email } },{immediate:true})
 async function save(key:string,value:any){await api.request(`/admin/settings/${key}`,{method:'POST',body:{value}});await refresh()}
 const checks=[{l:'API',v:'Connected',i:Activity,ok:true},{l:'Diagnostic engine',v:'Fallback-ready',i:Database,ok:true},{l:'Object storage',v:'Demo local',i:Globe2,ok:false},{l:'Auth',v:'JWT · 7 day',i:KeyRound,ok:true},{l:'Tenant isolation',v:'Enforced',i:ShieldCheck,ok:true}]

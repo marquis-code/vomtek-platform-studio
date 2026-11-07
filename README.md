@@ -1,14 +1,14 @@
-# LineSight Studio
+# Vomtek Studio
 
-Internal operations console for LineSight. Nuxt 3 SPA, port 3210.
+Internal operations console for Vomtek. Nuxt 3 SPA, port 3210.
 
 ## Run
 ```bash
 pnpm install
 pnpm dev
 ```
-Sign in at http://localhost:3210/login with `ops@linesight.io` /
-`LineSightOps!2026`.
+Sign in at http://localhost:3210/login with `ops@vomtek.com` /
+`VomtekOps!2026`.
 
 ## Scope
 Revenue overview, customers, marketplace orders, invoices/refunds, rentals,
