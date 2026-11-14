@@ -1,24 +1,20 @@
 @import "tailwindcss";
-@font-face{font-family:"Clash Display";src:url("/fonts/clash-display-500.woff2") format("woff2");font-weight:500;font-display:swap}
-@font-face{font-family:"Clash Display";src:url("/fonts/clash-display-600.woff2") format("woff2");font-weight:600;font-display:swap}
-@font-face{font-family:"Satoshi";src:url("/fonts/satoshi-400.woff2") format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"Satoshi";src:url("/fonts/satoshi-500.woff2") format("woff2");font-weight:500;font-display:swap}
-@font-face{font-family:"Satoshi";src:url("/fonts/satoshi-700.woff2") format("woff2");font-weight:700;font-display:swap}
-@font-face{font-family:"IBM Plex Mono";src:url("/fonts/ibm-plex-mono-400.woff2") format("woff2");font-weight:400;font-display:swap}
-@font-face{font-family:"IBM Plex Mono";src:url("/fonts/ibm-plex-mono-500.woff2") format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Inter";src:url("/fonts/inter-latin.woff2") format("woff2");font-weight:100 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Manrope";src:url("/fonts/manrope-latin.woff2") format("woff2");font-weight:200 800;font-style:normal;font-display:swap}
+
 @theme {
-  --color-ink:#07100e; --color-ink-2:#0b1713; --color-paper:#f1ede2; --color-bone:#f8f5ec; --color-signal:#ff5a1f; --color-mint:#5be3b3; --color-mint-deep:#0b6b4e; --color-vomtek:#007d48; --color-signal-deep:#c83b09;
-  --font-sans:"Satoshi",ui-sans-serif,sans-serif; --font-display:"Clash Display","Satoshi",sans-serif; --font-mono:"IBM Plex Mono",monospace;
+  --color-ink:#111612; --color-ink-2:#18201a; --color-paper:#f2f4ee; --color-bone:#fbfcf8; --color-signal:#d7e7d2; --color-mint:#b8d7b2; --color-mint-deep:#3b823f; --color-vomtek:#3b823f; --color-signal-deep:#285c2d;
+  --font-sans:"Inter",ui-sans-serif,sans-serif; --font-display:"Manrope","Inter",sans-serif; --font-mono:"Inter",monospace;
 }
-@layer base { body{background:var(--color-paper);color:var(--color-ink);font-family:var(--font-sans);font-size:14px;-webkit-font-smoothing:antialiased} h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-.03em;font-weight:500} input,select,textarea{font:inherit} ::selection{background:var(--color-signal);color:var(--color-ink)} }
-@utility label-mono{font-family:var(--font-mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase}
+@layer base { body{background:var(--color-paper);color:var(--color-ink);font-family:var(--font-sans);font-size:14px;-webkit-font-smoothing:antialiased} h1,h2,h3,h4{font-family:var(--font-display);letter-spacing:-.02em;font-weight:800} input,select,textarea{font:inherit} ::selection{background:var(--color-mint);color:var(--color-ink)} }
+@utility label-mono{font-family:var(--font-mono);font-size:.68rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase}
 @layer components {
-  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;min-height:2.2rem;padding:0 .8rem;border-radius:9999px;font-size:.7rem;font-weight:700;letter-spacing:.02em;transition:background .2s,color .2s,border-color .2s}
-  .btn-dark{background:var(--color-ink);color:var(--color-bone)} .btn-dark:hover{background:var(--color-signal);color:var(--color-ink)}
-  .btn-primary{background:var(--color-signal);color:var(--color-ink)} .btn-primary:hover{background:var(--color-ink);color:var(--color-bone)}
-  .btn-outline{border:1px solid rgba(7,16,14,.2);color:var(--color-ink)} .btn-outline:hover{border-color:var(--color-ink);background:var(--color-ink);color:var(--color-bone)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;min-height:2.2rem;padding:0 .8rem;border-radius:9999px;font-size:.76rem;font-weight:600;letter-spacing:.01em;transition:background .2s,color .2s,border-color .2s}
+  .btn-dark{background:var(--color-ink);color:var(--color-bone)} .btn-dark:hover{background:var(--color-vomtek);color:#fff}
+  .btn-primary{background:var(--color-vomtek);color:#fff} .btn-primary:hover{background:var(--color-vomtek-deep);color:#fff}
+  .btn-outline{border:1px solid rgba(17,22,18,.2);color:var(--color-ink)} .btn-outline:hover{border-color:var(--color-ink);background:var(--color-ink);color:var(--color-bone)}
   .btn-mint{background:var(--color-mint);color:var(--color-ink)}
-  .a-input{width:100%;min-height:2.2rem;border:1px solid rgba(7,16,14,.15);border-radius:8px;background:#fff;padding:.5rem .7rem;font-size:.78rem;outline:none;box-shadow:inset 0 1px 2px rgba(7,16,14,.03);transition:border-color .2s,box-shadow .2s} .a-input:hover{border-color:rgba(7,16,14,.28)} .a-input:focus{border-color:var(--color-vomtek);box-shadow:0 0 0 3px rgba(0,125,72,.1)}
-  .a-label{display:block;margin-bottom:.3rem;font-family:var(--font-mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(7,16,14,.42)}
-  .a-card{background:var(--color-bone);border:1px solid rgba(7,16,14,.12);border-radius:12px}
+  .a-input{width:100%;min-height:2.2rem;border:1px solid rgba(17,22,18,.15);border-radius:8px;background:#fff;padding:.5rem .7rem;font-size:.84rem;font-weight:500;outline:none;box-shadow:inset 0 1px 2px rgba(17,22,18,.03);transition:border-color .2s,box-shadow .2s} .a-input:hover{border-color:rgba(17,22,18,.28)} .a-input:focus{border-color:var(--color-vomtek);box-shadow:0 0 0 3px rgba(59,130,62,.1)}
+  .a-label{display:block;margin-bottom:.3rem;font-family:var(--font-mono);font-size:.58rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(17,22,18,.42)}
+  .a-card{background:var(--color-bone);border:1px solid rgba(17,22,18,.12);border-radius:12px}
 }
